@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url(../assets/images/topography.svg),
+      linear-gradient(110deg, #2baaff, #00054f); 
+    min-height: 100vh;
+}
+
+section{
+           
+    animation: down-to-up 1.5s linear backwards ;
+    animation-delay: 0.5s;
+} 
+
+@keyframes down-to-up{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/*pseudo-element, first child of the element selected*/
+section::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(#f00, #f0f);
+clip-path: circle(30% at right 70%);
+
+}
+
+section::after{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(#2196f3, #e91e63);
+clip-path: circle(20% at 10% 10%);
+}
+
+.container{
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: spacea;
+align-items: center;
+flex-wrap: wrap;
+margin: 40px 0;
+animation: down-to-up 1.5s linear backwards ;
+animation-delay: 0.5s;
+}
+
+@keyframes down-to-up{
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 1;
+}
+}
+
+
+
+.container .card{
+position: relative;
+width: 300px;
+height: 400px;
+background-color: rgba(0, 0, 0, 0.7);
+margin: 20px;
+box-shadow: 0 15px 35px rgba(29, 15, 15, 0.2);
+border-radius: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+backdrop-filter: blur(10px);
+}
+
+.container .card .content{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+opacity: 0.5;
+transition:0.5s
+}
+
+.container .card:hover .content{
+opacity: 1;
+}
+
+.container .card .content .imgBx{
+position: relative;
+width: 150px;
+height:150px;
+border-radius: 50%;
+border: 10px solid rgba(0,0,0,0.25);
+overflow:hidden;
+}
+
+.container .card .content .imgBx img{
+position: absolute;
+object-fit: cover;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.container .card .content .contentBx h3{
+color: white;
+letter-spacing: 2px;
+font-weight: 500;
+font-size: 18px;
+text-align: center;
+margin: 20px 0 10px;
+line-height: 1.8rem;
+
+}
+
+.container .card .content .contentBx span{
+font-size: 14px;
+font-weight: 300;
+text-transform: initial;
+}
+
+/*styles/disposition for the icons*/
+.container .card .sci {
+position: absolute;
+bottom:50px;
+display: flex;
+}
+
+.container .card .sci li {
+list-style: none; /*takes out the dots from the list elements*/
+margin:0 10px; /*space between the icons*/
+transform: translateY(40px); /*moves the icons 40px downwards*/
+opacity: 0; /*make the icons invisible*/
+transition: 0.5s;
+transition-delay: calc(0.1s * var(--i)); /*this line make the icons rise in order (depending on variable --i in html file, '--i=1'..)*/ 
+}  
+
+.container .card:hover .sci li {
+transform: translateY(0px); /*moves icons to the initial position of 0px*/
+opacity: 1;
+
+}
+
+.container .card .sci a {
+color: ivory;
+font-size: 24px; /*size of the icons*/
+
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:800px) {
+
+    .container{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

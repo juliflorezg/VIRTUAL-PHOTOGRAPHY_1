@@ -1,0 +1,784 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+body{
+    margin: 0;
+    padding: 0;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/images/topography.svg),
+    linear-gradient(110deg, #001d48, #000000); 
+    color: white; 
+    font-family: 'Abel', sans-serif;       
+}
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    overflow-y: visible;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.top-card{
+    /* background-color: #40D3DC; */
+    width: 800px;
+    height: 200px;
+    padding: 20px;
+    /* padding-top: 0; */
+    margin: 30px;
+    /* margin-top: 0; */
+    justify-content: center;
+    /* position: absolute; */
+    top: 0;
+}
+
+.top-card img{
+    float: left;
+    margin-top: 0;
+    margin-right: 30px;
+    border-radius: 50%;
+    width: 25%;
+
+    box-shadow: 0px 0px 12px  white;
+
+   
+}
+
+.slider0{
+    width: 1000px;    
+    height: 560px;
+    border-radius: 10px;
+    overflow-x: hidden;
+    margin:50px 0 ;
+    transform: translateX(0);
+    overflow: visible;
+}
+
+.slider0 .slides{
+    width: 500%;
+    height: 560px;
+    display: flex;
+    /* transform: translateX(200px); */
+    overflow: hidden;
+}
+
+
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 1.5s;
+}
+
+.slider0 .slide img{
+    width: 1000px;
+    height: 560px;
+    cursor: pointer;
+}
+
+/* CSS for manual navigation */
+
+.slider0 .navigation-manual{
+    position: absolute;
+    width: 1000px;
+
+    /* height: 500px; */
+
+    margin-top: 570px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+
+}
+
+.manual-btn{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 30px;
+}
+
+.manual-btn:hover{
+    background-color: #40D3DC;
+}
+
+/* CSS for auto navigation */
+
+.slider0 .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin-top: 570px;
+    
+}
+
+.navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 30px;
+}
+
+
+#radio0-1:checked ~ .first0{    margin-left: 0%;     }    
+#radio0-2:checked ~ .first0{    margin-left: -20%;   }
+#radio0-3:checked ~ .first0{    margin-left: -40%;   }
+#radio0-4:checked ~ .first0{    margin-left: -60%;   }
+#radio0-5:checked ~ .first0{    margin-left: -80%;   }
+#radio0-6:checked ~ .first0{    margin-left: -100%;   }
+#radio0-7:checked ~ .first0{    margin-left: -120%;   }
+#radio0-8:checked ~ .first0{    margin-left: -140%;   }
+#radio0-9:checked ~ .first0{    margin-left: -160%;   }
+#radio0-10:checked ~ .first0{    margin-left: -180%;   }
+#radio0-11:checked ~ .first0{    margin-left: -200%;   }
+
+
+#radio0-1:checked ~ .navigation-auto .auto-btn1{    background-color: #40D3DC;  }
+#radio0-2:checked ~ .navigation-auto .auto-btn2{    background-color: #40D3DC;  }
+#radio0-3:checked ~ .navigation-auto .auto-btn3{    background-color: #40D3DC;  }
+#radio0-4:checked ~ .navigation-auto .auto-btn4{    background-color: #40D3DC;  }
+#radio0-5:checked ~ .navigation-auto .auto-btn5{    background-color: #40D3DC;  }
+#radio0-6:checked ~ .navigation-auto .auto-btn6{    background-color: #40D3DC;  }
+#radio0-7:checked ~ .navigation-auto .auto-btn7{    background-color: #40D3DC;  }
+#radio0-8:checked ~ .navigation-auto .auto-btn8{    background-color: #40D3DC;  }
+#radio0-9:checked ~ .navigation-auto .auto-btn9{    background-color: #40D3DC;  }
+#radio0-10:checked ~ .navigation-auto .auto-btn10{    background-color: #40D3DC;  }
+#radio0-11:checked ~ .navigation-auto .auto-btn11{    background-color: #40D3DC;  }
+
+
+/* .first0{    transform: translateX(-100%);     } */
+
+
+/* ******************************************************* SECOND GALLERY ***************************************************** */
+/* ******************************************************* SECOND GALLERY ***************************************************** */
+/* ******************************************************* SECOND GALLERY ***************************************************** */
+
+.slider1{
+    width: 1000px;    
+    height: 600px;
+    /* border-radius: 10px; */
+    overflow-x: hidden;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    transform: translateX(0);
+    
+}
+
+.slider1 .slides{
+    width: 500%;
+    height: 560px;
+    display: flex;
+    
+    /* transform: translateX(200px); */
+}
+
+
+.slider1 .slide img{
+    width: 1000px;
+    height: 560px;
+    cursor: pointer;
+}
+
+/* CSS for manual navigation */
+
+.slider1 .slides .navigation-manual{
+    position: absolute;
+    width: 1000px;
+    /* height: 500px; */
+    margin-top: 570px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* CSS for auto navigation */
+
+.slider1 .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin-top: 570px;
+    z-index: 5;
+    
+}
+
+
+
+
+#radio1-1:checked ~ .first1{    margin-left: 0%;     }    
+#radio1-2:checked ~ .first1{    margin-left: -20%;   }
+#radio1-3:checked ~ .first1{    margin-left: -40%;   }
+#radio1-4:checked ~ .first1{    margin-left: -60%;   }
+#radio1-5:checked ~ .first1{    margin-left: -80%;   }
+#radio1-6:checked ~ .first1{    margin-left: -100%;   }
+#radio1-7:checked ~ .first1{    margin-left: -120%;   }
+#radio1-8:checked ~ .first1{    margin-left: -140%;   }
+
+
+
+#radio1-1:checked ~ .navigation-auto .auto-btn1{    background-color: #40D3DC;  }
+#radio1-2:checked ~ .navigation-auto .auto-btn2{    background-color: #40D3DC;  }
+#radio1-3:checked ~ .navigation-auto .auto-btn3{    background-color: #40D3DC;  }
+#radio1-4:checked ~ .navigation-auto .auto-btn4{    background-color: #40D3DC;  }
+#radio1-5:checked ~ .navigation-auto .auto-btn5{    background-color: #40D3DC;  }
+#radio1-6:checked ~ .navigation-auto .auto-btn6{    background-color: #40D3DC;  }
+#radio1-7:checked ~ .navigation-auto .auto-btn7{    background-color: #40D3DC;  }
+#radio1-8:checked ~ .navigation-auto .auto-btn8 {    background-color: #40D3DC;  }
+
+
+
+/* ******************************************************* THIRD GALLERY ***************************************************** */
+/* ******************************************************* THIRD GALLERY ***************************************************** */
+/* ******************************************************* THIRD GALLERY ***************************************************** */
+
+.slider2{
+    width: 1000px;    
+    height:550px;
+    /* border-radius: 10px; */
+    overflow-x: hidden;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    transform: translateX(0);
+    
+}
+
+.slider2 .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+    
+    /* transform: translateX(200px); */
+}
+
+
+.slider2 .slide img{
+    width: 1000px;
+    height: 500px;
+    cursor: pointer;
+}
+
+/* CSS for manual navigation */
+
+.slider2 .slides .navigation-manual{
+    position: absolute;
+    width: 1000px;
+    /* height: 500px; */
+    margin-top: 520px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* CSS for auto navigation */
+
+.slider2 .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin-top: 520px;
+    z-index: 5;
+    
+}
+
+
+
+
+#radio2-1:checked ~ .first2{    margin-left: 0%;     }    
+#radio2-2:checked ~ .first2{    margin-left: -20%;   }
+#radio2-3:checked ~ .first2{    margin-left: -40%;   }
+
+
+#radio2-1:checked ~ .navigation-auto .auto-btn1{    background-color: #40D3DC;  }
+#radio2-2:checked ~ .navigation-auto .auto-btn2{    background-color: #40D3DC;  }
+#radio2-3:checked ~ .navigation-auto .auto-btn3{    background-color: #40D3DC;  }
+
+
+
+
+/* ******************************************************** FOOTER ************************************************************ */
+/* ******************************************************** FOOTER ************************************************************ */
+/* ******************************************************** FOOTER ************************************************************ */
+
+.footer{
+    margin-top: 50px ;
+    width: 100%;
+    min-height: 200px;
+    /* background-color: rgb(45, 0, 118); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul{
+    margin-bottom: 50px;
+    margin-right: 40px;
+   
+    bottom:50px;
+    display: flex;
+    
+}
+
+li{
+    list-style: none; 
+    margin:0 25px; /*space between the icons*/
+    font-size: 3rem;
+    transition: 0.7s;
+    color: turquoise
+}
+
+li:hover{
+    transform: scale(150%);
+}
+
+a{
+    text-decoration: none;
+}
+
+.IG_link{
+    text-decoration: none;
+    color: purple;
+}
+.TW_link{
+    text-decoration: none;
+    color: turquoise;
+}
+
+.copyright{
+    width: 100%;
+    /* background-color: teal; */
+    text-align: center; 
+   
+}
+
+
+.copyright h5{
+    transition: 0.4s;
+}
+.copyright h5:hover{
+transform: scale(110%);
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+   
+}
+
+
+
+/* ******************************************************* MOBILE STYLES ***************************************************** */
+/* ******************************************************* MOBILE STYLES ***************************************************** */
+/* ******************************************************* MOBILE STYLES ***************************************************** */
+
+
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-y: visible;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.top-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #40D3DC; */
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    /* padding-top: 0; */
+    margin: 30px;
+    /* margin-top: 0; */
+    /* position: absolute; */
+    top: 0;
+}
+
+.top-card img{ 
+    margin: 20px;
+    border-radius: 50%;
+    width: 40%;
+    box-shadow: 0px 0px 12px  white;  
+}
+
+/* CSS for manual navigation */
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+
+/* CSS for auto navigation */
+
+
+.navigation-auto div:not(:last-child){
+    margin-right: 20px;
+}
+
+
+
+/* ******************************************************* SECOND GALLERY ***************************************************** */
+/* ******************************************************* SECOND GALLERY ***************************************************** */
+/* ******************************************************* SECOND GALLERY ***************************************************** */
+
+.slider1{
+    width: 375px;    
+    height: 250px;
+    /* border-radius: 10px; */
+    overflow-x: hidden;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    transform: translateX(0);
+    
+}
+
+.slider1 .slides{
+    width: 500%;
+    height: 200px;
+    display: flex;
+    
+    /* transform: translateX(200px); */
+}
+
+
+.slider1 .slide img{
+    width: 375px;
+    height: 200px;
+    cursor: grab;
+}
+
+/* CSS for manual navigation */
+
+.slider1 .slides .navigation-manual{
+    position: absolute;
+    width: 390px;
+    /* height: 500px; */
+    margin-top: 220px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* CSS for auto navigation */
+
+.slider1 .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 390px;
+    justify-content: center;
+    margin-top: 220px;
+    margin-bottom: 30px;
+    z-index: 5;
+    
+}
+
+
+
+
+/* ******************************************************* THIRD GALLERY ***************************************************** */
+/* ******************************************************* THIRD GALLERY ***************************************************** */
+/* ******************************************************* THIRD GALLERY ***************************************************** */
+
+.slider2{
+    width: 375px;    
+    height:250px;
+    /* border-radius: 10px; */
+    overflow-x: hidden;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    transform: translateX(0);
+    
+}
+
+.slider2 .slides{
+    width: 500%;
+    height: 200px;
+    display: flex;
+    
+    /* transform: translateX(200px); */
+}
+
+
+.slider2 .slide img{
+    width: 375px;
+    height: 200px;
+    cursor: pointer;
+}
+
+/* CSS for manual navigation */
+
+.slider2 .slides .navigation-manual{
+    position: absolute;
+    width: 390px;
+    /* height: 500px; */
+    margin-top: 220px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* CSS for auto navigation */
+
+.slider2 .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 390px;
+    justify-content: center;
+    margin-top: 220px;
+    margin-bottom: 30px;
+    z-index: 5;
+    
+}
+}
+
+
+/* ******************************************************* MEDIUM SIZE STYLES ***************************************************** */
+/* ******************************************************* MEDIUM SIZE STYLES ***************************************************** */
+/* ******************************************************* MEDIUM SIZE STYLES ***************************************************** */
+
+
+
+@media screen and (min-width:501px) and (max-width:1000px) {
+    
+
+    .wrapper{
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow-y: visible;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    
+    .top-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #40D3DC; */
+        width: 100%;
+        height: auto;
+        padding: 20px 50px;
+        /* padding-top: 0; */
+        margin: 30px;
+        /* margin-top: 0; */
+        /* position: absolute; */
+        top: 0;
+    }
+    
+    .top-card img{ 
+        margin: 20px;
+        border-radius: 50%;
+        width: 30%;
+        box-shadow: 0px 0px 12px  white;  
+    }
+    
+    .slider0 .navigation-manual{
+        position: absolute;
+        width: 1000px;
+    
+        /* height: 500px; */
+    
+        margin-top: 580px;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+    
+    }
+
+
+    /* CSS for manual navigation */
+
+    .slider0 .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 1000px;
+        justify-content: center;
+        margin-top: 580px;        
+    }
+    
+    .manual-btn{
+        border: 2px solid #40D3DC;
+        padding: 7px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+   
+    .manual-btn:not(:last-child){
+        margin-right: 30px;
+    }
+    
+    
+    /* CSS for auto navigation */
+    
+    .navigation-auto div{
+        border: 2px solid #40D3DC;
+        padding: 7px;
+        border-radius: 15px;
+        transition: 1s;
+    }
+    
+    .navigation-auto div:not(:last-child){
+        margin-right: 30px;
+    }
+    
+    
+    
+    /* ******************************************************* SECOND GALLERY ***************************************************** */
+    /* ******************************************************* SECOND GALLERY ***************************************************** */
+    /* ******************************************************* SECOND GALLERY ***************************************************** */
+    
+    .slider1{
+        width: 600px;    
+        height: 420px;
+        /* border-radius: 10px; */
+        overflow-x: hidden;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        transform: translateX(0);
+        
+    }
+    
+    .slider1 .slides{
+        width: 500%;
+        height: 300px;
+        display: flex;
+        
+        /* transform: translateX(200px); */
+    }
+    
+    
+    .slider1 .slide img{
+        width: 600px;
+        height: 350px;
+        cursor: pointer;
+    }
+    
+    /* CSS for manual navigation */
+    
+    .slider1 .slides .navigation-manual{
+        position: absolute;
+        width: 600px;
+        /* height: 500px; */
+        margin-top: 380px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+    }
+    
+    /* CSS for auto navigation */
+    
+    .slider1 .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 600px;
+        justify-content: center;
+        margin-top: 380px;
+        margin-bottom: 30px;
+        z-index: 5;
+        
+    }
+    
+    
+    
+    
+    /* ***************************************************** THIRD GALLERY ***************************************************** */
+    /* ***************************************************** THIRD GALLERY ***************************************************** */
+    /* ***************************************************** THIRD GALLERY ***************************************************** */
+    
+    .slider2{
+        width: 375px;    
+        height:250px;
+        /* border-radius: 10px; */
+        overflow-x: hidden;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        transform: translateX(0);
+        
+    }
+    
+    .slider2 .slides{
+        width: 500%;
+        height: 200px;
+        display: flex;
+        
+        /* transform: translateX(200px); */
+    }
+    
+    
+    .slider2 .slide img{
+        width: 375px;
+        height: 200px;
+        cursor: pointer;
+    }
+    
+    /* CSS for manual navigation */
+    
+    .slider2 .slides .navigation-manual{
+        position: absolute;
+        width: 390px;
+        /* height: 500px; */
+        margin-top: 220px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+    }
+    
+    /* CSS for auto navigation */
+    
+    .slider2 .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 390px;
+        justify-content: center;
+        margin-top: 220px;
+        margin-bottom: 30px;
+        z-index: 5;
+        
+    }
+    }
